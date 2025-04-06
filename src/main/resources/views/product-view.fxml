@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.geometry.Pos?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.Controllers.ProductController">
+    <children>
+        <TextField fx:id="productIdField" layoutX="14.0" layoutY="14.0" promptText="Enter Product ID" />
+        <TextField fx:id="productNameField" layoutX="14.0" layoutY="54.0" promptText="Enter Product Name" />
+        <TextField fx:id="priceField" layoutX="14.0" layoutY="94.0" promptText="Enter Price" />
+        <TextField fx:id="quantityField" layoutX="14.0" layoutY="134.0" promptText="Enter Quantity" />
+
+        <Button text="Add" layoutX="14.0" layoutY="174.0" onAction="#addProduct" />
+        <Button text="Delete" layoutX="74.0" layoutY="174.0" onAction="#deleteProduct"/>
+        <Button text="Update" layoutX="134.0" layoutY="174.0" onAction="#updateProduct"/>
+
+        <TableView fx:id="productsTableView" layoutX="14.0" layoutY="214.0" prefWidth="500.0" prefHeight="200.0">
+            <columns>
+                <TableColumn fx:id="productIdColumn" text="Product ID" prefWidth="100.0"/>
+                <TableColumn fx:id="productNameColumn" text="Product Name" prefWidth="150.0"/>
+                <TableColumn fx:id="priceColumn" text="Price" prefWidth="100.0"/>
+                <TableColumn fx:id="quantityColumn" text="Quantity" prefWidth="100.0" style="-fx-alignment: CENTER;"/>
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>
