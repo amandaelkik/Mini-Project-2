@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.OrderController" spacing="10.0">
+    <children>
+        <Text text="Order Management" style="-fx-font-size: 24; -fx-font-weight: bold;" />
+        <TableView fx:id="ordersTable">
+            <columns>
+                <TableColumn text="Order ID" />
+                <TableColumn text="Client ID" />
+                <TableColumn text="Product ID" />
+                <TableColumn text="Quantity" />
+                <TableColumn text="Order Date" />
+                <TableColumn text="Status" />
+            </columns>
+        </TableView>
+        <GridPane hgap="10" vgap="10">
+            <children>
+                <Label text="Order ID:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <TextField fx:id="orderIdField" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                
+                <Label text="Client ID:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <TextField fx:id="clientIdField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                
+                <Label text="Product ID:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                <TextField fx:id="productIdField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                
+                <Label text="Quantity:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                <TextField fx:id="quantityField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                
+                <Label text="Order Date:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                <DatePicker fx:id="orderDateField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                
+                <Label text="Status:" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+                <ComboBox fx:id="statusField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            </children>
+        </GridPane>
+        <HBox spacing="10">
+            <children>
+                <Button text="Add" onAction="#handleAddOrder" />
+                <Button text="Update" onAction="#handleUpdateOrder" />
+                <Button text="Delete" onAction="#handleDeleteOrder" />
+            </children>
+        </HBox>
+    </children>
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+</VBox>
