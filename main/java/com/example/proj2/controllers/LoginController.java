@@ -34,7 +34,7 @@ public class LoginController{
         if(username.equals("") || password.equals("")) {
             errorMsg.setText("Username and password are required!");
         }
-        else if(!username.equals("amandaelkik") || !password.equals("a12345")) {
+        else if(!username.equals("amandaelkik" ) || !password.equals("a12345")) {
             errorMsg.setText("Incorrect username and/or password");
         }
         else
