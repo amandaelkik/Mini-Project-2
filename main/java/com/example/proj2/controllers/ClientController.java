@@ -163,6 +163,7 @@ public class ClientController {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene homeScene = new Scene(homeRoot);
         stage.setScene(homeScene);
+        stage.setTitle("Home Page");
         stage.show();
     }
     @FXML

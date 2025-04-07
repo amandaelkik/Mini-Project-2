@@ -23,6 +23,7 @@ public class HomeController{
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene homeScene = new Scene(clientRoot);
         stage.setScene(homeScene);
+        stage.setTitle("Client Management");
         stage.show();
     }
    @FXML
