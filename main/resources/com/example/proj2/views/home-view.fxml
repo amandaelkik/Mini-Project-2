@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proj2.controllers.HomeController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demoo.controllers.HomeController">
    <children>
       <HBox layoutX="-6.0" prefHeight="400.0" prefWidth="262.0" style="-fx-background-color: purple;">
          <children>
@@ -46,12 +46,28 @@
                   <Insets bottom="35.0" left="85.0" right="35.0" top="35.0" />
                </VBox.margin>
             </Button>
-            <Button fx:id="productBtn" mnemonicParsing="false" onAction="#openProductBtn" prefHeight="42.0" prefWidth="178.0" style="-fx-background-color: purple;" text=" Product Management" textAlignment="CENTER" textFill="#fff6f6">
+            <Button fx:id="orderBtn1" mnemonicParsing="false" onAction="#openOrdersBtn" prefHeight="42.0" prefWidth="178.0" style="-fx-background-color: purple;" text="Orders Management" textAlignment="CENTER" textFill="#fff6f6">
                <font>
                   <Font name="Franklin Gothic Medium" size="16.0" />
                </font>
                <VBox.margin>
-                  <Insets bottom="25.0" left="85.0" right="25.0" top="-10.0" />
+                  <Insets bottom="35.0" left="85.0" right="35.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="productBtn11" layoutX="95.0" layoutY="122.0" mnemonicParsing="false" onAction="#openProductsBtn" prefHeight="42.0" prefWidth="178.0" style="-fx-background-color: purple;" text="Products Management" textAlignment="CENTER" textFill="#fff6f6">
+               <font>
+                  <Font name="Franklin Gothic Medium" size="16.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="35.0" left="85.0" right="35.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="invoicesBtn111" layoutX="95.0" layoutY="199.0" mnemonicParsing="false" onAction="#openInvoicesBtn" prefHeight="42.0" prefWidth="178.0" style="-fx-background-color: purple;" text="Invoices Management" textAlignment="CENTER" textFill="#fff6f6">
+               <font>
+                  <Font name="Franklin Gothic Medium" size="16.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="35.0" left="85.0" right="35.0" />
                </VBox.margin>
             </Button>
          </children>
