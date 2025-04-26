@@ -23,7 +23,7 @@ public class Invoices {
         this.status = new SimpleStringProperty(status);
     }
     //iid
-    public int getiid() {
+    public int getIid() {
         return iid.get();
     }
     public void setIid(int iid) {
@@ -33,7 +33,7 @@ public class Invoices {
         return this.iid;
     }
     //clientName
-    public String getclientName() {
+    public String getClientName() {
         return clientName.get();
     }
     public void setclientName(String clientName) {
@@ -43,7 +43,7 @@ public class Invoices {
         return this.clientName;
     }
     //orderid
-    public int getorderid() {
+    public int getOrderid() {
         return orderid.get();
     }
     public void setorderid(int orderid) {
@@ -53,7 +53,7 @@ public class Invoices {
         return this.orderid;
     }
     //totalamnt
-    public int gettotalamnt(){
+    public int getTotalamnt(){
         return totalamnt.get();
     }
     public void settotalamnt(int totalamnt){
@@ -63,7 +63,7 @@ public class Invoices {
         return this.totalamnt;
     }
     //dateissued
-    public LocalDate getdateissued(){
+    public LocalDate getDateissued(){
         return dateissued.get();
     }
     public void setdateissued(LocalDate dateissued){
@@ -73,7 +73,7 @@ public class Invoices {
         return this.dateissued;
     }
     //status
-    public String getstatus(){
+    public String getStatus(){
         return status.get();
     }
     public void setstatus(String status){
