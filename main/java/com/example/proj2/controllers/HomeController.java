@@ -1,4 +1,4 @@
-package com.example.demoo.controllers;
+package com.example.proj2.controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -17,7 +17,7 @@ public class HomeController {
 
     @FXML
     void openClientBtn(ActionEvent event) throws Exception{
-        Parent clientRoot =  FXMLLoader.load(getClass().getResource("/com/example/demoo/views/client-view.fxml"));
+        Parent clientRoot =  FXMLLoader.load(getClass().getResource("/com/example/proj2/views/client-view.fxml"));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene homeScene = new Scene(clientRoot);
         stage.setScene(homeScene);
@@ -25,7 +25,7 @@ public class HomeController {
     }
     @FXML
     void openOrdersBtn(ActionEvent event) throws Exception{
-        Parent orderRoot =  FXMLLoader.load(getClass().getResource("/com/example/demoo/views/orders-view.fxml"));
+        Parent orderRoot =  FXMLLoader.load(getClass().getResource("/com/example/proj2/views/orders-view.fxml"));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene homeScene = new Scene(orderRoot);
         stage.setScene(homeScene);
@@ -33,7 +33,7 @@ public class HomeController {
     }
     @FXML
     void openProductsBtn(ActionEvent event) throws Exception{
-        Parent orderRoot =  FXMLLoader.load(getClass().getResource("/com/example/demoo/views/product-view.fxml"));
+        Parent orderRoot =  FXMLLoader.load(getClass().getResource("/com/example/proj2/views/product-view.fxml"));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene homeScene = new Scene(orderRoot);
         stage.setScene(homeScene);
@@ -41,7 +41,7 @@ public class HomeController {
     }
     @FXML
     void openInvoicesBtn(ActionEvent event) throws Exception{
-        Parent invoicesRoot =  FXMLLoader.load(getClass().getResource("/com/example/demoo/views/invoices-view.fxml"));
+        Parent invoicesRoot =  FXMLLoader.load(getClass().getResource("/com/example/proj2/views/invoices-view.fxml"));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene homeScene = new Scene(invoicesRoot);
         stage.setScene(homeScene);

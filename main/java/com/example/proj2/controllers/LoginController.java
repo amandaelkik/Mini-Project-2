@@ -5,11 +5,15 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.paint.Color;
 import javafx.scene.control.PasswordField;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.scene.control.TextField;
+
+
+import java.sql.*;
+
 
 
 public class LoginController{
@@ -34,11 +38,38 @@ public class LoginController{
         if(username.equals("") || password.equals("")) {
             errorMsg.setText("Username and password are required!");
         }
-        else if((!username.equals("amandaelkik") || !password.equals("a12345"))&&(!username.equals("mazenmorched") || !password.equals("m12345"))) {
-            errorMsg.setText("Incorrect username and/or password");
+        else  try {
+
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            String dbURL = "jdbc:mysql://localhost:3306/workshopidb";
+            String dbUsername = "root";
+            String dbPassword = "123456-";
+            Connection conn = DriverManager.getConnection(dbURL, dbUsername, dbPassword);
+            System.out.println(conn);
+
+            Statement stmt = conn.createStatement();
+            String query = "SELECT * FROM Accounts WHERE username=\"" + username
+                    + "\" AND password=\"" + password + "\"";
+            System.out.println(query);
+            ResultSet rs = stmt.executeQuery(query);
+            System.out.println(rs);
+
+            if(rs.next()) {
+                errorMsg.setFill(Color.GREEN);
+                errorMsg.setText("Success! You have been signed in!");
+                login(event);
+            }
+            else {
+                errorMsg.setText("Error: Invalid Username and/or Password!");
+            }
+
+            rs.close();
+            stmt.close();
+            conn.close();
         }
-        else
-            login(event);
+        catch(Exception ex){
+            System.out.println(ex);
+        }
     }
 
 

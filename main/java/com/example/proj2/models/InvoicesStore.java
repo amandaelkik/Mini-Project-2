@@ -1,4 +1,4 @@
-package com.example.demoo.models;
+package com.example.proj2.models;
 
 //CREATE THE OBSERVABLE ARRAYList, PREFORM CRUD OPERATIONS
 

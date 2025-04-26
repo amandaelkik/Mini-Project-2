@@ -1,7 +1,7 @@
-package com.example.demoo.controllers;
+package com.example.proj2.controllers;
 
-import com.example.demoo.models.Invoices;
-import com.example.demoo.models.InvoicesStore;
+import com.example.proj2.models.Invoices;
+import com.example.proj2.models.InvoicesStore;
 //import eu.hansolo.toolbox.observables.ObservableList;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -286,7 +286,7 @@ public void updateInvoice(ActionEvent event) {
 
     @FXML
     void returnHome (ActionEvent event) throws IOException {
-        Parent homeRoot = FXMLLoader.load(getClass().getResource("/com/example/demoo/views/home-view.fxml"));
+        Parent homeRoot = FXMLLoader.load(getClass().getResource("/com/example/proj2/views/home-view.fxml"));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene homeScene = new Scene(homeRoot);
         stage.setScene(homeScene);
